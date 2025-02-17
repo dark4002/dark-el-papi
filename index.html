@@ -26,22 +26,31 @@
         .button:hover {
             background-color: #cc0000;
         }
+        #imagen {
+            display: none;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>¿Eres un perro, Jendry?</h1>
-    <img src="https://media1.tenor.com/m/JCPqvEiHbHkAAAAC/perros-graciosos.gif" alt="Perro gracioso" width="300">
     <button class="button" onclick="mostrarMensaje(1)">Sí</button>
     <button class="button" onclick="mostrarMensaje(2)">Sí</button>
 
+    <img id="imagen" src="https://media1.tenor.com/m/JCPqvEiHbHkAAAAC/perros-graciosos.gif" alt="Perro gracioso" width="300">
+
     <script>
         function mostrarMensaje(opcion) {
+            // Mostrar imagen
+            document.getElementById("imagen").style.display = "block";
+            
             if (opcion === 1) {
                 alert("😬🤨 Lo suponía... ");
             } else {
-                alert("😏 ¡Sabía que te gustaba la coja 😂");
+                alert("😏 ¡Sabía que te gustaba la coja. ");
             }
         }
     </script>
 </body>
 </html>
+
